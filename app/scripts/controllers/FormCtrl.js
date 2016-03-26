@@ -2,10 +2,10 @@
   'use strict';
 
   angular.module('urcApp')
-    .controller('FormCtrl', function ($scope, Data, $location) {
+    .controller('FormCtrl', function ($scope, Data, $location, $sce) {
       $scope.viewport = Data.viewport;
 
-      $scope.about = URC_DATA.about.replace('\n', '</p><p>');
+      $scope.about = $sce.trustAsHtml(URC_DATA.about.replace('\n', '</p><p>'));
 
       $scope.next = function () {
         $location.url('/rising-star');
