@@ -6,14 +6,14 @@
       login: {
         enroll: '',
         key: '',
-        isLoggedIn: BYPASS_LOGIN || false,
+        isLoggedIn: window.BYPASS_LOGIN || false,
         hasVoted: false,
         hasFeedback: false
       },
       url: {
-        login: TEST ? URC_DATA.urls.test : URC_DATA.urls.login,
-        vote: TEST ? URC_DATA.urls.test : URC_DATA.urls.vote,
-        feedback: TEST ? URC_DATA.urls.test : URC_DATA.urls.feedback,
+        login: window.TEST ? URC_DATA.urls.test : URC_DATA.urls.login,
+        vote: window.TEST ? URC_DATA.urls.test : URC_DATA.urls.vote,
+        feedback: window.TEST ? URC_DATA.urls.test : URC_DATA.urls.feedback,
         test: URC_DATA.urls.test
       },
       form: {
