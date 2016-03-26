@@ -11,9 +11,10 @@
         hasFeedback: false
       },
       url: {
-        login: URC_DATA.urls.login,
-        vote: URC_DATA.urls.vote,
-        feedback: URC_DATA.urls.feedback
+        login: TEST ? URC_DATA.urls.test : URC_DATA.urls.login,
+        vote: TEST ? URC_DATA.urls.test : URC_DATA.urls.vote,
+        feedback: TEST ? URC_DATA.urls.test : URC_DATA.urls.feedback,
+        test: URC_DATA.urls.test
       },
       form: {
         risingStar: '',
