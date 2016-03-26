@@ -1,0 +1,46 @@
+<md-card style="width: {{viewport.container}};">
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2 class="md-flex">Face of The Year</h2>
+    </div>
+  </md-toolbar>
+
+  <md-card-content layout="column" layout-margin>
+
+    <div layout="row" layout-align="space-around">
+      <div ng-repeat="male in data.male" class="rc-item rc-desktop rc-male" layout="column" layout-margin layout-padding
+           layout-align="center center"
+           ng-click="selectMale(male.name, $event)">
+        <img class="rc-desktop-image" ng-src="{{male.images.desktop}}" alt="{{male.name}}"/>
+
+        <div flex>{{male.name}}</div>
+      </div>
+    </div>
+
+    <br/>
+    <md-divider></md-divider>
+    <br/>
+
+    <div layout="row" layout-align="space-around">
+      <div ng-repeat="female in data.female" class="rc-item rc-desktop rc-female" layout="column" layout-margin
+           layout-padding
+           layout-align="center center"
+           ng-click="selectFemale(female.name, $event)">
+        <img class="rc-desktop-image" ng-src="{{female.images.desktop}}" alt="{{female.name}}"/>
+
+        <div flex>{{female.name}}</div>
+      </div>
+    </div>
+
+    <br/>
+    <md-divider></md-divider>
+    <br/>
+
+    <div layout="row" layout-align="center">
+      <md-button class="md-button md-primary md-raised" ng-disabled="!sectionFilled()" ng-click="next()">
+        Next
+      </md-button>
+    </div>
+
+  </md-card-content>
+</md-card>

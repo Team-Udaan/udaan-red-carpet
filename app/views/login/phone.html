@@ -1,0 +1,61 @@
+<md-card>
+
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2 class="md-flex">Red Carpet {{year}}</h2>
+    </div>
+  </md-toolbar>
+
+  <md-card-content layout="column" layout-margin>
+
+    <md-input-container>
+      <label>Enrollment No.</label>
+      <input type="text" id="enroll" autofocus ng-keypress="enrollHandler($event)" ng-model="data.enroll"
+             md-maxlength="12"
+             maxlength="12" title="Enrollment No." placeholder="130070107022">
+    </md-input-container>
+
+    <md-input-container>
+      <label>Key</label>
+      <input type="text" id="key" ng-keypress="keyHandler($event)" ng-model="data.key" title="Key" md-maxlength="4"
+             maxlength="4" placeholder="xxxx">
+    </md-input-container>
+
+    <div layout="row" layout-align="center">
+      <md-button class="md-button md-primary md-raised" ng-click="login($event)">Login</md-button>
+    </div>
+
+    <div layout="row" layout-align="center">
+      <md-button style="font-size: small; margin: 30px 0;" md-no-ink class="md-primary"
+                 ng-click="showRegistration($event)">Where's my key ?
+      </md-button>
+    </div>
+
+    <md-divider></md-divider>
+
+    <br/>
+
+    <div layout="column" layout-align="center center">
+      <div>Developed by</div>
+      <a href="https://github.com/dhruvin2910" target="_blank">
+        Dhruvin Gandhi
+      </a>
+
+      <a href="http://www.facebook.com/alaypatel07" target="_blank">
+        Alay Patel
+      </a>
+
+      <a href="http://www.facebook.com/dixita.ganatra.9" target="_blank">
+        Dixita Ganatra
+      </a>
+    </div>
+
+    <br/>
+
+    <div style="text-align: center;">
+      Fork this on
+      <a href="https://github.com/team-udaan/udaan-red-carpet" target="_blank"> Github </a>
+    </div>
+
+  </md-card-content>
+</md-card>

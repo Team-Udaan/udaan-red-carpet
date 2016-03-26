@@ -1,0 +1,44 @@
+<md-card>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2 class="md-flex">Face of The Year</h2>
+    </div>
+  </md-toolbar>
+
+  <md-card-content layout="column" layout-margin>
+
+    <div layout="column">
+      <div ng-repeat="male in data.male" class="rc-item rc-male" layout="row" layout-margin layout-padding
+           layout-align="start center"
+           ng-click="selectMale(male.name, $event)">
+        <img class="rc-phone-image" ng-src="{{male.images.phone}}" alt="{{male.name}}"/>
+
+        <div flex>{{male.name}}</div>
+      </div>
+    </div>
+
+    <br/>
+    <md-divider></md-divider>
+    <br/>
+
+    <div layout="column">
+      <div ng-repeat="female in data.female" class="rc-item rc-female" layout="row" layout-margin layout-padding
+           layout-align="end center"
+           ng-click="selectFemale(female.name, $event)">
+        <div flex style="text-align: right;">{{female.name}}</div>
+        <img class="rc-phone-image" ng-src="{{female.images.phone}}" alt="{{female.name}}"/>
+      </div>
+    </div>
+
+    <br/>
+    <md-divider></md-divider>
+    <br/>
+
+    <div layout="row" layout-align="center">
+      <md-button class="md-button md-primary md-raised" ng-disabled="!sectionFilled()" ng-click="next()">
+        Next
+      </md-button>
+    </div>
+
+  </md-card-content>
+</md-card>

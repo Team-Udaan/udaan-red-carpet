@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="urcApp">
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+
+  <title>Udaan Red Carpet</title>
+
+  <!--styles-->
+  <link rel="stylesheet" href="vendor/angular-material/angular-material.min.css"/>
+
+  <link rel="stylesheet" href="styles/main.css"/>
+  <!--end:styles-->
+
+  <!--scripts-->
+  <script src="vendor/angular/angular.min.js"></script>
+  <script src="vendor/angular-route/angular-route.min.js"></script>
+  <script src="vendor/angular-animate/angular-animate.min.js"></script>
+  <script src="vendor/angular-aria/angular-aria.min.js"></script>
+  <script src="vendor/angular-material/angular-material.min.js"></script>
+  <script src="vendor/angular-media-queries/match-media.js"></script>
+
+  <script src="config.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/values/Data.js"></script>
+  <script src="scripts/controllers/LoginCtrl.js"></script>
+  <script src="scripts/controllers/FormCtrl.js"></script>
+  <script src="scripts/controllers/RisingStarCtrl.js"></script>
+  <script src="scripts/controllers/SportsIconCtrl.js"></script>
+  <script src="scripts/controllers/FaceCtrl.js"></script>
+  <script src="scripts/controllers/StyleIconCtrl.js"></script>
+  <script src="scripts/controllers/PersonaCtrl.js"></script>
+  <script src="scripts/controllers/ArtistCtrl.js"></script>
+  <script src="scripts/controllers/VoteCtrl.js"></script>
+  <script src="scripts/controllers/FeedbackCtrl.js"></script>
+  <!--end:scripts-->
+
+</head>
+<body>
+
+<md-content class="slide" ng-view layout-fill layout="horizontal" layout-align="center"></md-content>
+
+</body>
+</html>

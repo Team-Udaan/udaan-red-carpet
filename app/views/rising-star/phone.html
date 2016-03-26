@@ -1,0 +1,31 @@
+<md-card>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2 class="md-flex">Rising Star</h2>
+    </div>
+  </md-toolbar>
+
+  <md-card-content layout="column" layout-margin>
+
+    <div layout="column">
+      <div ng-repeat="nominee in data" class="rc-item rc-nominee" layout="row" layout-margin layout-padding
+           layout-align="start center"
+           ng-click="select(nominee.name, $event)">
+        <img class="rc-phone-image" ng-src="{{nominee.images.phone}}" alt="{{nominee.name}}"/>
+
+        <div flex>{{nominee.name}}</div>
+      </div>
+    </div>
+
+    <br/>
+    <md-divider></md-divider>
+    <br/>
+
+    <div layout="row" layout-align="center">
+      <md-button class="md-button md-primary md-raised" ng-disabled="!sectionFilled()" ng-click="next()">
+        Next
+      </md-button>
+    </div>
+
+  </md-card-content>
+</md-card>
