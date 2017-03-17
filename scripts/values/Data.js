@@ -6,7 +6,8 @@
       login: {
         enroll: '',
         key: '',
-        isLoggedIn: false
+        isLoggedIn: false,
+        hasVoted: false
       },
       url: {
         login: URC_DATA.urls.login,
@@ -40,6 +41,7 @@
         if (!(this.form.styleIcon.male && this.form.styleIcon.female)) return '/style-icon';
         if (!(this.form.persona.male && this.form.persona.female)) return '/persona';
         if (!(this.form.artist.male && this.form.artist.female)) return '/artist-of-the-year';
+        if (!this.login.hasVoted) return '/vote';
         this.reset();
         return '/login';
       },
