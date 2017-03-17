@@ -1,5 +1,5 @@
-#Udaan Red Carpet
+# Udaan Red Carpet
 
-##Voting App
+## Voting App
 
-###[AngularJS and Material Design]
+### [AngularJS and Material Design]
