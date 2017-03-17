@@ -6,15 +6,11 @@
       login: {
         enroll: '',
         key: '',
-        isLoggedIn: window.BYPASS_LOGIN || false,
-        hasVoted: false,
-        hasFeedback: false
+        isLoggedIn: false
       },
       url: {
-        login: window.TEST ? URC_DATA.urls.test : URC_DATA.urls.login,
-        vote: window.TEST ? URC_DATA.urls.test : URC_DATA.urls.vote,
-        feedback: window.TEST ? URC_DATA.urls.test : URC_DATA.urls.feedback,
-        test: URC_DATA.urls.test
+        login: URC_DATA.urls.login,
+        vote: URC_DATA.urls.vote
       },
       form: {
         risingStar: '',
@@ -36,10 +32,6 @@
           female: ''
         }
       },
-      feedback: {
-        stars: 0,
-        suggestions: ''
-      },
       properView: function () {
         if (!this.login.isLoggedIn) return '/login';
         if (!this.form.risingStar) return '/rising-star';
@@ -48,8 +40,6 @@
         if (!(this.form.styleIcon.male && this.form.styleIcon.female)) return '/style-icon';
         if (!(this.form.persona.male && this.form.persona.female)) return '/persona';
         if (!(this.form.artist.male && this.form.artist.female)) return '/artist-of-the-year';
-        if (!this.login.hasVoted) return '/vote';
-        if (!this.login.hasFeedback) return '/feedback';
         this.reset();
         return '/login';
       },
@@ -57,8 +47,6 @@
         this.login.enroll = '';
         this.login.key = '';
         this.login.isLoggedIn = false;
-        this.login.hasVoted = false;
-        this.login.hasFeedback = false;
         this.form.risingStar = '';
         this.form.sportsIcon = '';
         this.form.face.male = '';
@@ -69,8 +57,6 @@
         this.form.persona.female = '';
         this.form.artist.male = '';
         this.form.artist.female = '';
-        this.feedback.stars = 0;
-        this.feedback.suggestions = '';
       },
       viewport: {}
     })

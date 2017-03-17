@@ -44,10 +44,6 @@
           templateUrl: 'views/vote.html',
           controller: 'VoteCtrl'
         })
-        .when('/feedback', {
-          templateUrl: 'views/feedback.html',
-          controller: 'FeedbackCtrl'
-        })
         .otherwise({
           redirectTo: '/login'
         })

@@ -18,8 +18,8 @@
           .success(function (response) {
             if (response.ok) {
 
-              $scope.mode = 'feedback';
-              Data.login.hasVoted = true;
+              Data.reset();
+              $location.url('/login');
 
               // Submitted Alert
               $mdDialog.show(
@@ -73,10 +73,6 @@
                 .ok('Connect')
             );
           });
-      };
-
-      $scope.next = function () {
-        $location.url('/feedback');
       };
 
       $location.url(Data.properView());
