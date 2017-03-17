@@ -11,12 +11,10 @@
 
         // Request server
         $http.post(Data.url.vote, {
-            login: {
-              enroll: Data.login.enroll,
-              key: Data.login.key
-            },
-            form: Data.form
-          })
+          enroll: Data.login.enroll,
+          key: Data.login.key,
+          form: Data.form
+        })
           .success(function (response) {
             if (response.ok) {
 
@@ -41,7 +39,7 @@
                   .title('Wrong Key')
                   .content('Enter the key provided at registration desk.')
                   .ok('Okay')
-                )
+              )
                 .then(function () {
                   $location.url('/login');
                 });
@@ -56,7 +54,7 @@
                   .title('Already Voted')
                   .content('You have already voted once.')
                   .ok('My Bad')
-                )
+              )
                 .then(function () {
                   $location.url('/login');
                 });
